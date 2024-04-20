@@ -16,8 +16,7 @@
         $_POST['numid']         = $_POST['numid'];
         $_POST['quantidade']    = $_POST['quantidade'];
     }
-
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -107,9 +106,7 @@
             <div class="cabecalho-formulario">
                 <h1>CADASTRE O PRODUTO</h1>
             </div>
-            <div class="cabecalho-formulario">
-                <h1><?php echo $_SESSION['nome'] ?></h1>
-            </div>
+           
             
             <form action="http://localhost/sistema_formulario/ProdutoConfirm.php" method="POST">
                 
@@ -130,6 +127,9 @@
                         <input type="text" name="quantidade" id="quantidade" placeholder="Digite a quantidade" maxlength=8 required>
                     </div>
 
+                    <div class="botao-salvar">
+                        <button><a>Salvar</a></button>
+                    </div>
                     <div class="botao-salvar">
                         <button><a>Salvar</a></button>
                     </div>
@@ -166,6 +166,10 @@
                  
             // }
         ?>
+
+            <div class="cabecalho-formulario">
+                <h1><?php echo $_SESSION['nome'] ?></h1>
+            </div>
 
             <table class="tabela-produtos">
                 <tr>
