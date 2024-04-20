@@ -1,0 +1,281 @@
+//  RELEMBRAR
+    
+    /*
+    
+        - CRIAÇÃO DE VARIÁVEL
+
+        - UTILIZAÇÃO DE OPERAÇÕES ARITMETICAS
+
+        - CRIAÇÃO E UTILIZAÇÃO DE ARRAYS
+    
+    */
+
+    // $nome = 'A';
+    // $nome1 = 'Z';
+
+    // PRATICANDO IF, ELSE, SWITCH E TERNARIO
+    //     && ||
+        
+        // if( $nome == 'A' AND ($nome1 == 'A' OR $nome1 == 'Z') )
+        // {
+        //     echo 'VERDADEIRO';
+        // }
+        // else
+        // {
+        //     print('FALSO');
+        //     ;
+        // }
+
+        // print_r( ($nome == 'A' AND ($nome1 == 'Z' OR $nome1 == 'C')) 
+                        
+        //                 ? 'VERDADEIRO' : "FALSO" );
+
+
+        // $nota_aluno = 10;
+
+        // switch ($nota_aluno) {
+        //     case 4:
+        //     case 5:
+        //     case 6:
+
+        //         echo 'tá na média!';
+
+        //     break;
+
+        //     case 7:
+        //     case 8:
+        //     case 9:
+        //     case 10:
+        //         echo 'média alta, parabéns!';
+        //     break;
+
+        //     default:
+        //         echo 'é oto';
+        //     break;
+        // }
+
+        // die;
+
+        // ($nome == 'A' AND ($nome1 == 'Z' OR $nome1 == 'C'))? "victor" : 'clara' ;
+
+
+    // UTILIZADOS PARA VERIFICAÇÃO E EXIBIÇÃO OU NÃO DOS ELEMENTOS DA TELA;
+        $permitir_email = 0;
+
+        $exibe_email = 1;
+
+
+
+    // MANIPULANDO ARRAYS 
+    
+        //* $array_numero = ['a', 'b', 'c', 'd'];
+        // * echo"<prev>";
+        // * print_r($array_numero[0]);
+
+
+
+        // $array_numero = array('a', 'b', 'c', 'd');
+        
+        // $array_numero = [ 
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['DSA', 'ASD', 'POSICAO 2', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b', 'c', 'd'],
+        //     ['a', 'b',    'c', 'd'],
+        // ];
+
+        // print_r($array_numero[2])
+
+        // ESPECIFICANDO POSIÇÃO DA ARRAY/MATRIZ
+            // echo "<pre>";
+            // print_r($array_numero[3][0]);
+            // die;
+
+
+        // $array_numero = array
+            
+        //     232, 
+        //     array('a', 'b', 'c', 'd'),
+        //     array('321', 231, 'c'),
+        //     array('a', 'd'),
+        //     'sdadasdsdsada',
+        
+        
+
+        // $elemento = 'asjihda , asdioa8 duhasd sdioahsd8ga , sidgaysgda sdmasdhasidga gdiahd , asdugai7sdga idgausd';
+        
+        // $elemento = array('a', 21.5, '1231', 'd');
+
+        // UTILIZANDO VAR_DUMP
+        // echo "<pre>";
+        // var_dump($elemento);
+        // print_r( explode(' , ', $elemento) );
+        // print_r( implode('  separador  ', $elemento) );
+
+        // die;
+        
+        // $valor  = intval('129312387');
+        // $valor  = floatval('129312387');
+        // $valor2 = 129312387;
+
+        // print_r( $valor + $valor2 );
+
+        
+        // $array_numero = array('1', '2');
+
+        // array_diff($array_numero, $array_numero); // VERIFICAR
+
+        // array_diff($array_numero, array('2'));
+
+        // echo "<pre>";
+        // print_r( $array_numero );
+        // die;
+
+
+        // INICIALIZEI O ARRAY UTILIZADO.
+        // $array_numero = array('asdasdas', 'asdasdadasdsa');
+
+        // ARRAY_PUSH SERVE PARA ADICIONAR ELEMENTOS DENTRO DE UMA ARRAY.
+        // array_push($array_numero, 'asds', 'as1ds', 1231231, 'asds', 'asds', 'asds', 111.333, 'asds'); // VERIFICAR FUNCAO DE REMOVER ELEMENTO DA ARRAY
+
+        // echo "<pre>";
+        // print_r( $array_numero );
+        // die;
+
+        // $array_numero.push('osdhs');
+    
+    
+
+    // print_r($array_numero);
+    // echo "<pre>";
+    // print_r($array_numero);
+    // die;
+
+    // MANIPULANDO ESTRUTURAS DE REPETIÇÃO
+    
+    // FOR
+    // FOREACH
+    // WHILE
+    // DO WHILE
+
+    // $valor = 1;
+
+    //  ( $valor <= 20 ) 
+    // while( $valor <= 20 )
+    // {
+    //     echo "<pre>";
+    //     print_r($valor);
+
+    //     $valor++;
+    // }
+
+    // FAÇA, ENQUANTO ($valor <= 20) FOR VERDADEIRO
+    // do
+    // {
+    //     echo "<pre>";
+    //     print_r($valor);
+    //     $valor++;
+
+    // }while ($valor <= 20);
+
+    // PARA $valor = 0, enquanto $valor <= 10, faça $valor++ e o que tiver dentro da função for.
+    // for( $valor = 0 ; $valor <= 10 ; $valor++ )
+    // {
+    //     echo "<pre>";
+    //     print_r($valor);
+    // }
+
+    // // echo "<pre>";
+    // // print_r($valor);
+    // die;
+
+    
+
+    // $nome   = 'A';
+    // $nome1  = 'Z';
+    // $nome2  = 'C';
+
+    // $boleano = ( $nome == 'A' AND ($nome1 == 'A' OR $nome1 == 'Z') );
+
+    // $exibe_email = 1;
+
+    // if($exibe_email == 0)
+    // {
+    //     $boleano = $boleano AND ($nome2 == 'C' AND $nome2 != 'D');
+    // }
+
+    // if( $boleano )
+    // {
+    //     print_r('FOI');
+    // }
+    // else
+    // {
+    //     print_r('N FOI');
+    // }
+
+    // die;
+
+
+    - AULA DATA 11/03/2024
+
+    1 - Revemos as atividades feitas, e como foram feitas.
+
+    2 - Começamos a ver o envio de dados por fomulário.
+
+        - Vimos que um botão dentro de um form, caso não especificado o atributo type, por padrão já é do type="submit"
+            * Nesse caso, ao clicar no botão, já é executado o formulário, enviando os dados do formulário.
+
+        - Utilizando o método $_POST, pegamos as informações enviadas por formulário.
+
+        - Vimos como especificar a 'rota' (o atributo 'action' do form), redirecionado para outra 'tela' (arquivo)
+
+----------------------------------------
+
+ /* 
+
+        1 - Dessa tela, envie os dados por formulário para outra tela e exiba todos os dados na tela.
+
+            1.1 - Desses dados enviados, verifique se a 'senha' é igual a 'confirmar senha', se não for, em vez de exibir os dados 
+                    do usuário na tela, exibir mensagem de erro na tela 'Senhas não são iguais!'.
+        
+            1.2 - Nessa telas, terá que ter um botão para voltar a tela iniciar (index) do sistema.
+
+            
+        2 - Nessa outra tela que for criada, adicionar botão para mudar de 'tema',
+
+            'Deixar Escuro' - Caso clique nesse, a tela será carregada com o background preto.
+
+            'Deixar Claro' - Caso clique nesse, a tela será carregada com o background branco.
+
+
+        -----------------------------------------------------------------------------------------------------------------------------------------
+        data 15/03/24,
+
+        1 - PESQUISAR SOBRE FUNÇÕES DO PHP ABAIXO:
+
+        - str_replace ok
+        - substr ok
+        - trim
+
+        * O que fazem e mostrar um exemplo.
+
+        2 - Exibir a data formatada na tela. OK
+
+        3 - Pesquisar como é o redirecionamento para outra tela pela tag <a> (Para o botão 'Voltar') OK
+
+    */ 
+
+      
+                <!-- UTILIZANDO COLCHETE NO FINAL DO NAME PARA ENVIAR MAIS DE UMA INFORMAÇÃO DE MESMO 'TIPO' -->
+                <!-- 
+                    
+                    <input type="hidden" name="nome[]" value="escondido">
+                    <input type="hidden" name="nome[]" value="escondido1">
+                    <input type="hidden" name="nome[]" value="escondido2">
+                    <input type="hidden" name="nome[]" value="escondido3"> 
+            
+                -->
