@@ -38,6 +38,25 @@
             background-color: gray;
             text-decoration: none;
         }
+        .botao-sair button {
+            margin-top: 2.5rem;
+            margin-left:1rem;
+            font-weight: bold;
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: gray;
+            text-decoration: none;
+        }
+
+        .botao-sair button a{
+            background-color: gray;
+            text-decoration: none;
+            color: white;
+        }
+
         .formulario{
             background-color: ;
         }
@@ -47,8 +66,18 @@
             border-radius: 2rem;
             box-shadow: 2rem 2rem grey;
         }
+
+        .caixa-botao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
         .nome-usuario h1{
-            text-align:center;
+            padding-top: 2rem;
+            padding-left: 5rem;
+            text-align: center;
             font-family: verdana;
             color: black;
         }
@@ -83,7 +112,7 @@
             padding-left: 18px;
         }
         .tabela-produtos{
-            margin:30%;
+            margin:20%;
         }
         .tabela-produtos tr th{
             background-color: white;
@@ -109,7 +138,7 @@
             </div>
            
             
-            <form action="http://localhost/sistema_formulario/ProdutoConfirm.php" method="POST">
+            <form action="http://localhost/formulario/ProdutoConfirm.php" method="POST">
                 
                 <div class="caixa-formulario">
                     
@@ -128,12 +157,15 @@
                         <input type="text" name="quantidade" id="quantidade" placeholder="Digite a quantidade" maxlength=8 required>
                     </div>
 
-                    <div class="botao-salvar">
-                        <button><a>Salvar</a></button>
+                    <div class="caixa-botao">
+                        <div class="botao-salvar">
+                            <button><a>Salvar</a></button>
+                        </div>
+                        <div class="botao-sair">
+                            <button><a href="tela_login.php">Sair</a></button>
+                        </div>
                     </div>
-                    <div class="botao-salvar">
-                        <button><a>Salvar</a></button>
-                    </div>
+
                 </div>
             </form>
         </div>
@@ -169,7 +201,7 @@
         ?>
 
             <div class="nome-usuario">
-                <h1><?php echo $_SESSION['nome'] ?></h1>
+                <h1><?php echo 'Bem vindo, '.$_SESSION['nome'].'!' ?></h1>
             </div>
 
             <table class="tabela-produtos">

@@ -31,7 +31,7 @@
 
     $sql_query = $mysql->query($sql_code) OR die("ERRO ao realizar essa operação! " . $mysql->error); 
 
-    header("location: http://localhost/sistema_formulario/mensagem.php");
+    header("location: http://localhost/formulario/mensagem.php");
 
   } 
 

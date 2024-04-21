@@ -27,14 +27,14 @@
       $_SESSION['email']            = $retorno['email'];
       $_SESSION['data_hora_login']  = date('d/m/Y H:i:s');
       
-      header("location: http://localhost/sistema_formulario/tela_inicial.php"); 
+      header("location: http://localhost/formulario/tela_inicial.php"); 
 
     }
     else
     {
       echo "ERRO, EMAIL OU SENHA INCORRETOS";
 
-      header("location:  http://localhost/sistema_formulario/tela_login.php"); 
+      header("location:  http://localhost/formulario/tela_login.php"); 
     }
 
     // echo "<pre>";

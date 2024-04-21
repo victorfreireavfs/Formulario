@@ -84,7 +84,7 @@
                 <h1>LOGIN</h1>
             </div>
             
-            <form action="http://localhost/sistema_formulario/LoginConfirm.php" method="POST">
+            <form action="http://localhost/formulario/LoginConfirm.php" method="POST">
                 
                 <div class="caixa-formulario">
                     

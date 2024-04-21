@@ -128,7 +128,7 @@
         
         <div class="formulario">
            
-            <form action="http://localhost/sistema_formulario/CadastroConfirm.php" method="POST">
+            <form action="http://localhost/formulario/CadastroConfirm.php" method="POST">
               
                 <input type="hidden" name="tela_cadastro" value="1">
 

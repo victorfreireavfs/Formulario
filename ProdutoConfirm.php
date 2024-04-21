@@ -24,7 +24,7 @@
 
     $sql_query = $mysql->query($sql_code) OR die("ERRO ao realizar essa operação! " . $mysql->error); 
 
-    header("location: http://localhost/sistema_formulario/tela_inicial.php");
+    header("location: http://localhost/formulario/tela_inicial.php");
 
   } 
 
