@@ -47,7 +47,8 @@
             border-radius: 2rem;
             box-shadow: 2rem 2rem grey;
         }
-        .cabecalho-formulario h1{
+        .nome-usuario h1{
+            text-align:center;
             font-family: verdana;
             color: black;
         }
@@ -167,7 +168,7 @@
             // }
         ?>
 
-            <div class="cabecalho-formulario">
+            <div class="nome-usuario">
                 <h1><?php echo $_SESSION['nome'] ?></h1>
             </div>
 
