@@ -9,6 +9,7 @@
         $_SESSION['senha']      = $_POST['senha'];
     }
 
+    session_start();    
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,11 @@
             font-weight: bold;
             color: white;
         }
-
+        .msg_erro{
+            text-align:center;
+            color: red;
+            margin-bottom:20px;
+        }
     </style>
 </head>
 <body>
@@ -75,11 +80,15 @@
         </div>
         
         <div class="formulario">
-
+            
+            <div class="msg_erro">
+                <h1><?php echo $_SESSION['MSG_ERRO'];?></h1>
+            </div>
             <div class="botao-cadastro">
                 <button><a href="tela_cadastro.php">Cadastre-se</a></button>
             </div>
             
+
             <div class="cabecalho-formulario">
                 <h1>LOGIN</h1>
             </div>

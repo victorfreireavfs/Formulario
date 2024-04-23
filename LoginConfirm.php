@@ -19,9 +19,12 @@
 
     $retorno = $sql_query->fetch_assoc();
 
-    if( !empty($retorno) )
+    session_start();
+
+    $_SESSION['MSG_ERRO'] = '';
+
+  if( !empty($retorno) )
     {
-      session_start();
 
       $_SESSION['nome']             = $retorno['nome'];
       $_SESSION['email']            = $retorno['email'];
@@ -32,7 +35,7 @@
     }
     else
     {
-      echo "ERRO, EMAIL OU SENHA INCORRETOS";
+      $_SESSION['MSG_ERRO'] = 'Erro: Email ou senha incorretos!';
 
       header("location:  http://localhost/formulario/tela_login.php"); 
     }

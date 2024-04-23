@@ -2,7 +2,7 @@
 
     $base_url = "http://localhost/sistema_formulario/";
     
-    include "Conexao.php";
+    include "getProdutos.php";
 
     session_start();
 
@@ -213,30 +213,20 @@
                
                 <?php
                     
-                    if (!empty($array_produtos)) {
+                    foreach($produtos as $produto)
+                    {
+                        
+                        echo "  <tr>
 
-                        foreach ($array_produtos as $produto){
+                                    <td>". $produto['nome']      ."</td>
+                                    <td>". $produto['numid']        ."</td>
+                                    <td>". $produto['quantidade']   ."</td>
+                                    
+                                </tr>";
 
-                            echo "  <tr>
-
-                                        <td>". $produto['nomepro']      ."</td>
-                                        <td>". $produto['numid']        ."</td>
-                                        <td>". $produto['quantidade']   ."</td>
-                                        
-                                    </tr>";
-
-                        }
                     }
-                
+            
                 ?>
-
-                <!-- <tr>
-
-                    <td><?php echo ($produto['nomepro'])?></td>
-                    <td><?php echo ($produto['numid'])?></td>
-                    <td><?php echo ($produto['quantidade'])?></td>
-                    
-                </tr> -->
                     
             </table>
         </div>

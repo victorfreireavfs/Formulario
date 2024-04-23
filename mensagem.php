@@ -64,8 +64,16 @@
         
         <div class="formulario">
 
-            <h1>Operação realizada Com sucesso!</h1>
-            <a href="http://localhost/sistema_formulario/tela_login.php">IR PARA LOGIN</a>
+            <h1>
+                <?php 
+                    session_start();
+
+                    echo $_SESSION['MSG_ERRO'];
+                    
+                    $_SESSION['MSG_ERRO'] = '';
+                ?>
+            </h1>
+            <a href="http://localhost/formulario/tela_login.php">IR PARA LOGIN</a>
             
         </div>
     </div>

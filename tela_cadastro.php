@@ -49,6 +49,7 @@
         $_POST['datanascimento']    = $_POST['datanascimento'];
     }
 
+    session_start();
 ?>
 
 
@@ -118,6 +119,11 @@
             font-size: 18px;
             font-weight: bold;
         }
+        .msg_erro{
+            text-align:center;
+            color: red;
+            margin-bottom:20px;
+        }
         </style>
     </head>
 <body>
@@ -132,13 +138,16 @@
               
                 <input type="hidden" name="tela_cadastro" value="1">
 
+                <div class="msg_erro">
+                    <h1><?php echo $_SESSION['MSG_ERRO'];?></h1>
+                </div>
                 <div id="cabecalho-formulario_" class="cabecalho-formulario">
                     <div class="titulo">
                         <h1>Cadastre-se</h1>
                     </div>
                     
                     <div class="botao-login">
-                        <button><a href="tela_login.php">Login</a></button>
+                        <button type="button"><a href="tela_login.php">Login</a></button>
                     </div>
                 </div>
 
