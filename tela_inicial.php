@@ -6,7 +6,7 @@
 
     session_start();
 
-    $_POST['nomepro']          = '';
+    $_POST['nomepro']       = '';
     $_POST['numid']         = '';
     $_POST['quantidade']    = '';
 
@@ -171,34 +171,6 @@
         </div>
 
         <div class="produtos-cadastrados">
-        <?php 
-               
-            // if ($_SERVER["REQUEST_METHOD"] == "POST") {       
-            //     $nome = htmlspecialchars($_POST['nomepro']);
-            //     $numeroid = htmlspecialchars($_POST['numid']);
-            //     $quantidade = htmlspecialchars($_POST['quantidade']);
-            // }
-
-            // session_start();
-            // if (!isset($_SESSION['produtos'])) {
-            //     $_SESSION['produtos'] = [];
-            // }
-
-            // if ($_SERVER['REQUEST_METHOD'] == 'POST' 
-            //     && !empty($_POST['nomepro']) 
-            //     && !empty($_POST['numid'] 
-            //     && !empty($_POST['quantidade']))){
-               
-            //     $produto = [
-            //         'nomepro' => $_POST['nomepro'],
-            //         'numid' => $_POST['numid'],
-            //         'quantidade' => $_POST['quantidade'],
-            //     ];
-
-            //     $_SESSION['produtos'][] = $produto;
-                 
-            // }
-        ?>
 
             <div class="nome-usuario">
                 <h1><?php echo 'Bem vindo, '.$_SESSION['nome'].'!' ?></h1>
