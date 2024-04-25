@@ -5,21 +5,6 @@
     include "getUsuarios.php";
 
     session_start();
-
-    $_POST['nome']              = '';
-    $_POST['sobrenome']         = '';
-    $_POST['email']             = '';
-    $_POST['celular']           = '';
-    $_POST['dataNascimento']    = '';
-
-    if( $_SERVER["REQUEST_METHOD"] == "POST" )
-    {
-        $_POST['nome']            = $_POST['nome'];
-        $_POST['sobrenome']       = $_POST['sobrenome'];
-        $_POST['email']           = $_POST['email'];
-        $_POST['celular']         = $_POST['celular'];
-        $_POST['dataNascimento']  = $_POST['dataNascimento'];
-    }
     
 ?>
 
@@ -116,8 +101,12 @@
                     }
             
                 ?>
-                    
             </table>
+
+            <div class="botao-sair">
+                <button><a href="tela_inicial.php">Voltar</a></button>
+            </div>
+
         </div>
     </div>
 </body>

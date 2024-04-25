@@ -19,16 +19,21 @@
 
     $retorno = $sql_query->fetch_assoc();
 
+    // echo "<pre>";
+    // print_r($retorno);
+    // die;
+
     session_start();
 
     $_SESSION['MSG_ERRO'] = '';
 
-  if( !empty($retorno) )
+    if( !empty($retorno) )
     {
 
       $_SESSION['nome']             = $retorno['nome'];
       $_SESSION['email']            = $retorno['email'];
       $_SESSION['data_hora_login']  = date('d/m/Y H:i:s');
+      $_SESSION['acesso_adm']       = $retorno['ACESSO_ADM'];
       
       header("location: http://localhost/formulario/tela_inicial.php"); 
 

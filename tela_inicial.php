@@ -1,21 +1,23 @@
 <?php
 
-    $base_url = "http://localhost/sistema_formulario/";
-    
-    include "getProdutos.php";
-
+    include "getProdutos.php";      
     session_start();
 
-    $_POST['nomepro']       = '';
-    $_POST['numid']         = '';
-    $_POST['quantidade']    = '';
 
-    if( $_SERVER["REQUEST_METHOD"] == "POST" )
-    {
-        $_POST['nomepro']          = $_POST['nomepro'];
-        $_POST['numid']         = $_POST['numid'];
-        $_POST['quantidade']    = $_POST['quantidade'];
-    }
+    // echo "<pre>";
+    // print_r($_SESSION);
+    // die;
+
+    // $_POST['nomepro']       = '';
+    // $_POST['numid']         = '';
+    // $_POST['quantidade']    = '';
+
+    // if( $_SERVER["REQUEST_METHOD"] == "POST" )
+    // {
+    //     $_POST['nomepro']          = $_POST['nomepro'];
+    //     $_POST['numid']         = $_POST['numid'];
+    //     $_POST['quantidade']    = $_POST['quantidade'];
+    // }
     
 ?>
 
@@ -120,6 +122,11 @@
         .tabela-produtos tr td{
             background-color: lightgreen;
         }
+
+        .botao-usuarios{
+
+
+        }
     </style>
 </head>
 <body>
@@ -174,6 +181,13 @@
 
             <div class="nome-usuario">
                 <h1><?php echo 'Bem vindo, '.$_SESSION['nome'].'!' ?></h1>
+
+                <?php if($_SESSION['acesso_adm'] == 1){ ?>
+
+                    <a href="tela_usuarios.php"><button id="botao-usuarios">Tela Usuários</button></a>
+
+                <?php } ?>
+
             </div>
 
             <table class="tabela-produtos">
