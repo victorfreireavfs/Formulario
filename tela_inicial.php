@@ -1,6 +1,7 @@
 <?php
 
     include "getProdutos.php";      
+    include "ProdutoConfirm.php";
     session_start();
 
 
@@ -122,10 +123,10 @@
         .tabela-produtos tr td{
             background-color: lightgreen;
         }
-
-        .botao-usuarios{
-
-
+        .msg_cadastro_produto{
+            text-align:center;
+            color: lightgreen;
+            margin-bottom:20px;
         }
     </style>
 </head>
@@ -215,6 +216,11 @@
                 ?>
                     
             </table>
+
+            <div class="msg_cadastro_produto">
+                <h1><?php echo $_SESSION['MSG_ERRO'];?></h1>
+            </div>
+
         </div>
         <script src="botao_cor.js"></script>
 

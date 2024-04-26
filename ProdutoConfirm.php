@@ -24,6 +24,8 @@
 
     $sql_query = $mysql->query($sql_code) OR die("ERRO ao realizar essa operação! " . $mysql->error); 
 
+    $_SESSION['MSG_ERRO'] = 'Cadastro Realizado com sucesso!';
+
     header("location: http://localhost/formulario/tela_inicial.php");
 
   } 
