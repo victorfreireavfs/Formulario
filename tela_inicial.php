@@ -1,24 +1,12 @@
 <?php
 
     include "getProdutos.php";      
-    include "ProdutoConfirm.php";
     session_start();
-
+    // $_SESSION['MSG_ERRO'] = '';
 
     // echo "<pre>";
-    // print_r($_SESSION);
+    // print_r($produtos);
     // die;
-
-    // $_POST['nomepro']       = '';
-    // $_POST['numid']         = '';
-    // $_POST['quantidade']    = '';
-
-    // if( $_SERVER["REQUEST_METHOD"] == "POST" )
-    // {
-    //     $_POST['nomepro']          = $_POST['nomepro'];
-    //     $_POST['numid']         = $_POST['numid'];
-    //     $_POST['quantidade']    = $_POST['quantidade'];
-    // }
     
 ?>
 
@@ -128,6 +116,8 @@
             color: lightgreen;
             margin-bottom:20px;
         }
+
+
     </style>
 </head>
 <body>
@@ -135,16 +125,21 @@
                
         <div class="formulario">
 
+            <div class="msg_cadastro_produto">
+                <h1>
+                    <?php echo $_SESSION['MSG_ERRO'];?>
+                </h1>
+            </div>
+
             <div class="botao_muda_cor">
                 <button id="botao_cor">Mudar cor de Fundo</button>
                 <input type="text" id="campo_cor" placeholder="#FFFFFF">
                 <button id="botao_aplicar">Aplicar</button>
             </div>
-            
+
             <div class="cabecalho-formulario">
                 <h1>CADASTRE O PRODUTO</h1>
             </div>
-           
             
             <form action="http://localhost/formulario/ProdutoConfirm.php" method="POST">
                 
@@ -193,21 +188,25 @@
 
             <table class="tabela-produtos">
                 <tr>
+                    <th></th>
                     <th>Nome</th>
                     <th>Nº Identificador</th>
                     <th>Quantidade</th>
+                    <th></th>
                 </tr>
                
                 <?php
                     
-                    foreach($produtos as $produto)
+                    foreach($produtos as $posicao => $produto)
                     {
                         
-                        echo "  <tr>
-
+                        echo "  <tr id='linha_".$posicao."'>
+                        
+                                    <td> <button type='button' class='btn_excluir_produto'>EXCLUIR</button> </td>
                                     <td>". $produto['nome']      ."</td>
                                     <td>". $produto['numid']        ."</td>
                                     <td>". $produto['quantidade']   ."</td>
+                                    <td> <button type='button' class='btn_alterar_produto' linha='".$posicao."' onclick='alterarProduto(this)'>ALTERAR</button> </td>
                                     
                                 </tr>";
 
@@ -216,10 +215,6 @@
                 ?>
                     
             </table>
-
-            <div class="msg_cadastro_produto">
-                <h1><?php echo $_SESSION['MSG_ERRO'];?></h1>
-            </div>
 
         </div>
         <script src="botao_cor.js"></script>

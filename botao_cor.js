@@ -13,7 +13,24 @@ document.getElementById('botao_aplicar').addEventListener('click', function() {
         document.body.style.backgroundColor = color;
     }
     
-    document.getElementById('campo_cor').style.display = 'none';
+    document.document('campo_cor').style.display = 'none';
     this.style.display = 'none';
     document.getElementById('botao_cor').style.display = 'inline';
 });
+
+function alterarProduto(elemento)
+{
+    console.log(elemento)
+    
+    // PEGANDO O NÚMERO DA LINHA PELO ATRIBUTO 'linha' CRIADO no botão.
+    linha = elemento.getAttribute('linha');
+    console.log(elemento.getAttribute('linha'))
+    
+    // PEGANDO O TR TODO PARA PEGAR AS INFORMAÇÕES DO PRODUTO.
+    tr = document.getElementById('linha_'+ linha);
+    console.log( tr )
+    
+    tds = tr.children;
+    console.log( tds )
+    
+}
