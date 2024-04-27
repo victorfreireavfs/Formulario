@@ -33,4 +33,10 @@ function alterarProduto(elemento)
     tds = tr.children;
     console.log( tds )
     
+    document.getElementById('nomepro').value = tds[1].innerText;
+    document.getElementById('numid').value = tds[2].innerText;
+    document.getElementById('quantidade').value = tds[3].innerText;
+
+    document.getElementById('numid').setAttribute('readonly', 'readonly');
+
 }
