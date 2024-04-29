@@ -18,6 +18,13 @@ document.getElementById('botao_aplicar').addEventListener('click', function() {
     document.getElementById('botao_cor').style.display = 'inline';
 });
 
+// FUNÇÂO CANCEÇAR ALTERAÇÕES
+function cancelarAlteracoes(){
+    window.location.reload();
+};
+
+// FUNÇÃO ALTERAR PRODUTO   
+
 function alterarProduto(elemento)
 {
     console.log(elemento)
@@ -39,4 +46,6 @@ function alterarProduto(elemento)
 
     document.getElementById('numid').setAttribute('readonly', 'readonly');
 
-}
+};
+
+

@@ -56,6 +56,21 @@
             background-color: #fff;
         }
 
+
+        .botao-sair a {
+            font-weight:bold;
+            text-decoration: none;
+            background-color: grey;
+            color:white;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .botao-sair {
+            display:flex;
+            margin:5%;
+        }
+
     </style>
 </head>
 <body>

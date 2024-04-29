@@ -41,6 +41,18 @@
             background-color: gray;
             text-decoration: none;
         }
+        .botao-cancelar button {
+            margin-top: 2.5rem;
+            margin-left:1rem;
+            font-weight: bold;
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: gray;
+            text-decoration: none;
+        }
 
         .botao-sair button a{
             background-color: gray;
@@ -95,6 +107,7 @@
         #botao_aplicar, #campo_cor{
             display: none;
         }
+
         .tabela-produtos, tr, th, td{
             border: 1px solid black;
         }
@@ -103,7 +116,8 @@
             padding-left: 18px;
         }
         .tabela-produtos{
-            margin:20%;
+            display: flex;
+            margin: 2%;
         }
         .tabela-produtos tr th{
             background-color: white;
@@ -117,6 +131,19 @@
             margin-bottom:20px;
         }
 
+        .botao-usuarios a {
+            font-weight:bold;
+            text-decoration: none;
+            background-color: white ;
+            color:gray ;
+            padding: 4px 10px;
+            border-radius: 5px;
+        }
+
+        .botao-usuarios {
+            display:flex;
+            margin:auto;
+        }
 
     </style>
 </head>
@@ -167,6 +194,9 @@
                         <div class="botao-sair">
                             <button><a href="tela_login.php">Sair</a></button>
                         </div>
+                        <div class="botao-cancelar">
+                            <button type="button" onclik="cancelarAlteracoes">Cancelar</button>
+                        </div>
                     </div>
 
                 </div>
@@ -180,7 +210,9 @@
 
                 <?php if($_SESSION['acesso_adm'] == 1){ ?>
 
-                    <a href="tela_usuarios.php"><button id="botao-usuarios">Tela Usuários</button></a>
+                    <button class= "botao-usuarios" id="botao-usuarios">
+                     <a href="tela_usuarios.php">Tela Usuários</a>
+                    </button>
 
                 <?php } ?>
 
