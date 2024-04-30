@@ -195,7 +195,7 @@
                             <button><a href="tela_login.php">Sair</a></button>
                         </div>
                         <div class="botao-cancelar">
-                            <button type="button" onclik="cancelarAlteracoes">Cancelar</button>
+                            <button onclik="recarregarPagina">Cancelar</button>
                         </div>
                     </div>
 

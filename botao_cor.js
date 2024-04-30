@@ -19,7 +19,7 @@ document.getElementById('botao_aplicar').addEventListener('click', function() {
 });
 
 // FUNÇÂO CANCEÇAR ALTERAÇÕES
-function cancelarAlteracoes(){
+function recarregarPagina(){
     window.location.reload();
 };
 
@@ -46,6 +46,28 @@ function alterarProduto(elemento)
 
     document.getElementById('numid').setAttribute('readonly', 'readonly');
 
-};
+}
 
+function salvarDados() {
+    // Encontrar todos os elementos editáveis na tabela
+    var celulas = document.querySelectorAll('#tabelaEditavel td[contenteditable="true"]');
+    var dados = [];
 
+    celulas.forEach(function(celula, index) {
+        dados.push(celula.innerText);
+    });
+
+     // Criar um formulário para enviar os dados
+     var form = new FormData();
+     for (let i = 0; i < dados.length; i++) {
+         form.append('dados[]', dados[i]);
+     }
+
+     fetch('CadastroConfirm.php', {
+        method: 'POST',
+        body: form
+    })
+    .then(response => response.text())
+    .then(texto => alert("Dados salvos com sucesso!"))
+    .catch(erro => console.error('Erro ao salvar dados:', erro));
+}

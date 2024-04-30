@@ -43,8 +43,8 @@
         }
 
         .conteudo{
-            width: 70%;
-            height: 90vh;
+            width: 90%;
+            height: 90%;
             display: flex;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.452);
         }
@@ -69,6 +69,7 @@
         .botao-sair {
             display:flex;
             margin:5%;
+        
         }
 
     </style>
@@ -89,13 +90,16 @@
                 <h1><?php echo 'Bem vindo, '.$_SESSION['nome'].'!' ?></h1>
             </div>
 
-            <table class="tabela-usuarios">
+            <table class="tabela-usuarios" id="tabelaEditavel">
                 <tr>
+                    <th></th>
                     <th>Nome</th>
                     <th>Sobrenome</th>
                     <th>Email</th>
                     <th>Celular</th>
                     <th>Data de Nascimento</th>
+                   
+
                 </tr>
                
                 <?php
@@ -103,13 +107,13 @@
                     foreach($usuarios as $usuario)
                     {
                         
-                        echo "  <tr>
-
-                                    <td>". $usuario ['nome'] ."</td>
-                                    <td>". $usuario ['sobrenome'] ."</td>
-                                    <td>". $usuario ['email'] ."</td>
-                                    <td>". $usuario ['celular'] ."</td>
-                                    <td>". $usuario ['dataNascimento'] ."</td>
+                        echo "  <tr> 
+                                    <td> <button type='button' class='btn_excluir_produto'>EXCLUIR</button> </td>
+                                    <td contenteditable='true'>". $usuario ['nome'] ."</td>
+                                    <td contenteditable='true'>". $usuario ['sobrenome'] ."</td>
+                                    <td contenteditable='true'>". $usuario ['email'] ."</td>
+                                    <td contenteditable='true'>". $usuario ['celular'] ."</td>
+                                    <td contenteditable='true'>". $usuario ['dataNascimento'] ."</td>
                                     
                                 </tr>";
 
@@ -120,9 +124,11 @@
 
             <div class="botao-sair">
                 <button><a href="tela_inicial.php">Voltar</a></button>
+                <button tyoe="button" onclik="salvarDados()">Salvar Alterações</button>
             </div>
 
         </div>
     </div>
+    <script src="botao_cor.js"></script>
 </body>
 </html>

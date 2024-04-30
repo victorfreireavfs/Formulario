@@ -53,4 +53,14 @@
 
   } 
 
+  if (!empty($_POST['dados'])) {
+    $dados = $_POST['dados'];
+    // Aqui você processaria os dados, por exemplo, salvando-os em um banco de dados
+    // Este exemplo só imprime os dados para demonstração
+    foreach ($dados as $dado) {
+        echo ($dado) . "<br>";
+    }
+} else {
+    echo "Nenhum dado recebido.";
+}
 ?>
