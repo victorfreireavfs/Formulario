@@ -63,13 +63,17 @@
             background-color: grey;
             color:white;
             padding: 4px 10px;
-            border-radius: 5px;
+            
         }
 
-        .botao-sair {
-            display:flex;
-            margin:5%;
-        
+        .botao-sair button{
+            margin:2%;
+            font-weight:bold;
+            text-decoration: none;
+            background-color: grey;
+            color:white;
+            padding: 4px 10px;
+            border-radius: 5px;
         }
 
     </style>
@@ -98,22 +102,24 @@
                     <th>Email</th>
                     <th>Celular</th>
                     <th>Data de Nascimento</th>
-                   
-
+                    <th></th>
+                    
                 </tr>
                
                 <?php
                     
-                    foreach($usuarios as $usuario)
+                    foreach($usuarios as $posicao => $usuario)
                     {
                         
-                        echo "  <tr> 
+                        echo "  <tr id='linha_".$posicao."'> 
+
                                     <td> <button type='button' class='btn_excluir_produto'>EXCLUIR</button> </td>
                                     <td contenteditable='true'>". $usuario ['nome'] ."</td>
                                     <td contenteditable='true'>". $usuario ['sobrenome'] ."</td>
                                     <td contenteditable='true'>". $usuario ['email'] ."</td>
                                     <td contenteditable='true'>". $usuario ['celular'] ."</td>
                                     <td contenteditable='true'>". $usuario ['dataNascimento'] ."</td>
+                                    <td> <button type='button' class='btn_alterar_usuario' linha='".$posicao."' onclick='alterarUsuario(this)'>ALTERAR</button> </td>
                                     
                                 </tr>";
 
@@ -124,11 +130,23 @@
 
             <div class="botao-sair">
                 <button><a href="tela_inicial.php">Voltar</a></button>
-                <button tyoe="button" onclik="salvarDados()">Salvar Alterações</button>
+                <button tyoe="button" onclick="salvarDados()">Salvar Alterações</button>
             </div>
 
         </div>
     </div>
-    <script src="botao_cor.js"></script>
+    <script src="usuario.js"></script>
+
+    <form method="POST" action="http://localhost/formulario/tela_cadastro.php" id="formAlterarUsuario">
+
+        <input type="hidden" name="nome"                id="usuario_nome"           value="">
+        <input type="hidden" name="sobrenome"           id="usuario_sobrenome"      value="">
+        <input type="hidden" name="email"               id="usuario_email"          value="">
+        <input type="hidden" name="celular"             id="usuario_celular"        value="">
+        <input type="hidden" name="dataNascimento"      id="usuario_dataNascimento" value="">
+
+    </form>
+
+
 </body>
 </html>

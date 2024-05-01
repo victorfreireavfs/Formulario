@@ -31,23 +31,20 @@
 	// - Se a hora atual estiver entre 12:01h até 17h, exibir o fundo cinza.
 	// - Se a hora atual estiver entre 17:01h até 5:59h, exibir o fundo preto.
 
-    $_POST['nome']              = '';
-    $_POST['sobrenome']         = '';
-    $_POST['email']             = '';
-    $_POST['celular']           = '';
-    $_POST['senha']             = '';
-    $_POST['senhaconfirm']      = '';
-    $_POST['datanascimento']    = '';
+    $request_post = $_SERVER['REQUEST_METHOD'] == 'POST';
 
-    if( $_SERVER['REQUEST_METHOD'] == 'POST' ){        
-        $_POST['nome']              = $_POST['nome'];
-        $_POST['sobrenome']         = $_POST['sobrenome'];
-        $_POST['email']             = $_POST['email'];
-        $_POST['celular']           = $_POST['celular'];
-        $_POST['senha']             = $_POST['senha'];
-        $_POST['senhaconfirm']      = $_POST['senhaconfirm'];
-        $_POST['datanascimento']    = $_POST['datanascimento'];
+    if( !($request_post) )
+    {    
+        $_POST['nome']              = '';
+        $_POST['sobrenome']         = '';
+        $_POST['email']             = '';
+        $_POST['celular']           = '';
+        $_POST['dataNascimento']    = ''; 
     }
+
+    // echo "<pre>";
+    // print_r($_POST);
+    // die;
 
     session_start();
 ?>
@@ -59,7 +56,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-<title>Cadastro Usuário</title>
+    <title>Cadastro Usuário</title>
     <style>
         body{
             
@@ -134,7 +131,7 @@
         
         <div class="formulario">
            
-            <form action="http://localhost/formulario/CadastroConfirm.php" method="POST">
+            <form action="http://localhost/formulario/<?php echo ($request_post ? 'AlterarConfirm.php' : 'CadastroConfirm.php') ?>" method="POST">
               
                 <input type="hidden" name="tela_cadastro" value="1">
 
@@ -143,7 +140,9 @@
                 </div>
                 <div id="cabecalho-formulario_" class="cabecalho-formulario">
                     <div class="titulo">
-                        <h1>Cadastre-se</h1>
+                        <h1>
+                            <?php echo ($request_post)? 'Alterar' : 'Cadastre-se' ?>
+                        </h1>
                     </div>
                     
                     <div class="botao-login">
@@ -170,7 +169,7 @@
 
                         <div class="caixa-input">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" value="<?php echo $_POST['email']?>" <?php echo ($permitir_email == 1 ? '': 'disabled') ?> placeholder=" Digite seu email" required>
+                            <input type="email" name="email" id="email" value="<?php echo $_POST['email']?>" <?php echo ($request_post ? 'readonly' : '') ?> placeholder=" Digite seu email" required>
                         </div>
 
                     <?php } ?>
@@ -181,20 +180,24 @@
                         <input type="tel" name="celular" id="celular" value="<?php echo $_POST['celular']?>" <?php echo ($bloquear_celular == 1 ? ' ' : 'disabled');?>  placeholder="(xx) xxxxx-xxxx" required>
                     </div>
 
-                    <div class="caixa-input">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" maxlength=8 required>
-                    </div>
+                    <?php if( !($request_post) ) { ?>
 
-                    <div class="caixa-input">
-                        <label for="senhaconfirm">Confirme sua senha</label>
-                        <input type="password" name="senhaconfirm" id="senhaconfirm" placeholder="Confirme sua senha" maxlength=8 required>
-                    </div>
+                        <div class="caixa-input">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" maxlength=8 required>
+                        </div>
+    
+                        <div class="caixa-input">
+                            <label for="senhaconfirm">Confirme sua senha</label>
+                            <input type="password" name="senhaconfirm" id="senhaconfirm" placeholder="Confirme sua senha" maxlength=8 required>
+                        </div>
+
+                    <?php } ?>
 
                     <?php if($exibir_data_nascimento) { ?>
                         <div class="caixa-input">
                             <label for="datanascimento">Data de Nascimento</label>
-                            <input type="date" name="datanascimento" id="datanascimento" value="<?php echo $_POST['datanascimento']?>" required>
+                            <input type="date" name="datanascimento" id="datanascimento" value="<?php echo $_POST['dataNascimento']?>" required>
                         </div>
                     <?php } ?>
                     
