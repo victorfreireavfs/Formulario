@@ -107,13 +107,14 @@
                 </tr>
                
                 <?php
+
                     
                     foreach($usuarios as $posicao => $usuario)
                     {
                         
                         echo "  <tr id='linha_".$posicao."'> 
 
-                                    <td> <button type='button' class='btn_excluir_produto'>EXCLUIR</button> </td>
+                                    <td> <button type='button' class='btn_excluir_usuario'  linha='".$posicao."' onclick='excluirUsuario(this)'>EXCLUIR</button> </td>
                                     <td contenteditable='true'>". $usuario ['nome'] ."</td>
                                     <td contenteditable='true'>". $usuario ['sobrenome'] ."</td>
                                     <td contenteditable='true'>". $usuario ['email'] ."</td>
@@ -130,23 +131,27 @@
 
             <div class="botao-sair">
                 <button><a href="tela_inicial.php">Voltar</a></button>
-                <button tyoe="button" onclick="salvarDados()">Salvar Alterações</button>
+                <button type="button" onclick="salvarDados()">Salvar Alterações</button>
             </div>
 
         </div>
     </div>
-    <script src="usuario.js"></script>
-
-    <form method="POST" action="http://localhost/formulario/tela_cadastro.php" id="formAlterarUsuario">
-
+    
+    <form method="post" action="http://localhost/formulario/tela_cadastro.php" id="formalterarusuario">
+        
         <input type="hidden" name="nome"                id="usuario_nome"           value="">
         <input type="hidden" name="sobrenome"           id="usuario_sobrenome"      value="">
         <input type="hidden" name="email"               id="usuario_email"          value="">
         <input type="hidden" name="celular"             id="usuario_celular"        value="">
-        <input type="hidden" name="dataNascimento"      id="usuario_dataNascimento" value="">
-
+        <input type="hidden" name="datanascimento"      id="usuario_datanascimento" value="">
+        
     </form>
-
+    
+    <form method="post" action="http://localhost/formulario/tela_usuarios.php" id="formexcluirusuario">
+        <input type="hidden" name="email" id="usuario_email_excl" value="">
+    </form>
+    
+    <script src="usuario.js"></script>
 
 </body>
 </html>

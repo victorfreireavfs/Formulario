@@ -20,7 +20,7 @@
     {
       $_SESSION['MSG_ERRO'] = 'Email já existe cadastrado!';
       
-      header("location: http://localhost/formulario/tela_cadastro.php");
+      header,
       die;
     }
 

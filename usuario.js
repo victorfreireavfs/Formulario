@@ -46,6 +46,26 @@ function alterarUsuario(elemento)
     document.getElementById('usuario_celular').value        = tds[4].innerText;
     document.getElementById('usuario_dataNascimento').value = tds[5].innerText;
     
-    document.getElementById('formAlterarUsuario').submit();
-}
+    document.getElementById('formalterarusuario').submit();
+};
 
+
+
+function excluirUsuario(elemento){
+    console.log(elemento)    
+    
+    linha = elemento.getAttribute('linha');
+    console.log(elemento.getAttribute('linha'))
+    
+    tds = tr.children;
+    console.log( tds );
+
+    //  Criar o formulário especifico só para excluir o usuário, assim como foi criado para o alterar.
+        if(confirm('Tem certeza?'))
+
+        document.getElementById('usuario_email_excl').value=tds[1]
+
+        // console.log(document.getElementsByClassName('btn_excluir_usuario'))
+        // // document.getElementsByClassName('btn_excluir_usuario').submit();
+        document.getElementById('formexcluirusuario').submit();
+}
