@@ -27,18 +27,14 @@
 
 function alterarUsuario(elemento)
 {
-    console.log(elemento)
     
     // PEGANDO O NÚMERO DA LINHA PELO ATRIBUTO 'linha' CRIADO no botão.
     linha = elemento.getAttribute('linha');
-    console.log(elemento.getAttribute('linha'))
     
     // PEGANDO O TR TODO PARA PEGAR AS INFORMAÇÕES DO PRODUTO.
     tr = document.getElementById('linha_'+ linha);
-    console.log( tr )
     
     tds = tr.children;
-    console.log( tds )
     
     document.getElementById('usuario_nome').value           = tds[1].innerText;
     document.getElementById('usuario_sobrenome').value      = tds[2].innerText;
@@ -57,15 +53,20 @@ function excluirUsuario(elemento){
     linha = elemento.getAttribute('linha');
     console.log(elemento.getAttribute('linha'))
     
+    tr = document.getElementById('linha_'+ linha);
+
     tds = tr.children;
     console.log( tds );
 
+
     //  Criar o formulário especifico só para excluir o usuário, assim como foi criado para o alterar.
-        if(confirm('Tem certeza?'))
+    if(confirm('Tem certeza?'))
+    {
+        document.getElementById('usuario_email_excl')
+    }
 
-        document.getElementById('usuario_email_excl').value=tds[1]
-
-        // console.log(document.getElementsByClassName('btn_excluir_usuario'))
-        // // document.getElementsByClassName('btn_excluir_usuario').submit();
-        document.getElementById('formexcluirusuario').submit();
+    // console.log(document.getElementsByClassName('btn_excluir_usuario'))
+    // document.getElementsByClassName('btn_excluir_usuario').submit();
+    
+    // document.getElementById('formexcluirusuario').submit();
 }

@@ -5,7 +5,7 @@
     include "getUsuarios.php";
 
     session_start();
-    
+  
 ?>
 
 <!DOCTYPE html>
@@ -143,7 +143,7 @@
         <input type="hidden" name="sobrenome"           id="usuario_sobrenome"      value="">
         <input type="hidden" name="email"               id="usuario_email"          value="">
         <input type="hidden" name="celular"             id="usuario_celular"        value="">
-        <input type="hidden" name="datanascimento"      id="usuario_datanascimento" value="">
+        <input type="hidden" name="dataNascimento"      id="usuario_dataNascimento" value="">
         
     </form>
     

@@ -11,10 +11,7 @@
 
   while( $usuario = $sql_query->fetch_assoc() )
   {
-
     array_push($usuarios, $usuario);
-
-  
   }
 
   
