@@ -87,7 +87,10 @@
             <h1>Usuários cadastrados</h1>
         </div>
            
-            
+        <div class="msg_erro">
+            <h1><?php echo $_SESSION['MSG_ERRO'];?></h1>
+        </div>
+        
         <div class="usuarios-cadastrados">
 
             <div class="nome-usuario">
@@ -147,7 +150,7 @@
         
     </form>
     
-    <form method="post" action="http://localhost/formulario/tela_usuarios.php" id="formexcluirusuario">
+    <form method="post" action="http://localhost/formulario/deletUsuario.php" id="formexcluirusuario">
         <input type="hidden" name="email" id="usuario_email_excl" value="">
     </form>
     

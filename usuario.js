@@ -58,15 +58,11 @@ function excluirUsuario(elemento){
     tds = tr.children;
     console.log( tds );
 
-
     //  Criar o formulário especifico só para excluir o usuário, assim como foi criado para o alterar.
     if(confirm('Tem certeza?'))
     {
-        document.getElementById('usuario_email_excl')
+        document.getElementById('usuario_email_excl').value = tds[3].innerText;
+        document.getElementById('formexcluirusuario').submit();
     }
 
-    // console.log(document.getElementsByClassName('btn_excluir_usuario'))
-    // document.getElementsByClassName('btn_excluir_usuario').submit();
-    
-    // document.getElementById('formexcluirusuario').submit();
 }
