@@ -47,6 +47,9 @@
     // die;
 
     session_start();
+
+    $_SESSION['MSG_ERRO'] = !empty($_SESSION['MSG_ERRO']) ? $_SESSION['MSG_ERRO'] : '';
+
 ?>
 
 

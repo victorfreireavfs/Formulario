@@ -2,7 +2,10 @@
 
     include "getProdutos.php";      
     session_start();
-    // $_SESSION['MSG_ERRO'] = '';
+
+    $_SESSION['MSG_ERRO'] = !empty($_SESSION['MSG_ERRO']) ? $_SESSION['MSG_ERRO'] : '';
+    $_SESSION['acesso_adm'] = !empty($_SESSION['acesso_adm']) ? $_SESSION['acesso_adm'] : '';
+    $_SESSION['nome'] = !empty($_SESSION['nome']) ? $_SESSION['nome'] : '';
 
     // echo "<pre>";
     // print_r($produtos);

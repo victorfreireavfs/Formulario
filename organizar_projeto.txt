@@ -1,0 +1,38 @@
+
+
+1 - Organizar os arquivos
+
+    - Separar arquivos de telas, arquivos de validações do banco, css, js, por pastas.
+
+2 - Passar a utilizar a variavel $base_url.
+
+    - Criar arquivo novo para armazenar variáveis 'globais'.
+
+    - dentro desse arquivo, salvar a variável $base_url, e atribuir o caminho base do projeto.
+
+        $base_url = "http://localhost/formulario/";
+
+    - Em todos os links (<a>) ou actions de <form> chamar por $base_url, e depois informar o nome do arquivo que tu quer redirecionar.
+
+3 - Fazer um menu, para poder transitar pelas telas.
+
+    - Na tela inicial, adicionar um menu com as opções 'Produtos', 'Usuarios' e 'Sair' no final da direita.
+
+    - Na parte esquerda do menu, adicionar 'Bem vindo(a), <nome do usuário>'.
+
+4 - Na tela de cadastro, deixar o campo Data de Nascimento cimétrico.
+
+5 - Em todas as telas, deixar os containers base, com 100% de height (no body e no .conteudo).
+
+6 - Separar os elementos exibidos na tela.
+
+    - Criar arquivos para 'cada elemento' da tela. Para os que são utilizados em todas as telas.
+
+    - Importar os elementos globais em todas as telas.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+7 - Limpar MSG_ERRO após utilizar. Verificar antes de utilizar.
+
+8 - Fazer o 'Salvar Alterações' da tela de usuários.

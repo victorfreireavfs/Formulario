@@ -1,11 +1,22 @@
 <?php
 
-    $base_url = "http://localhost/sistema_formulario/";
+    $base_url = "http://localhost/formulario/";
     
     include "getUsuarios.php";
 
     session_start();
   
+    // if( !empty($_SESSION['MSG_ERRO']) )
+    // {
+    //     $_SESSION['MSG_ERRO'] = $_SESSION['MSG_ERRO'];
+    // }
+    // else
+    // {
+    //     $_SESSION['MSG_ERRO'] = '';
+    // }
+
+    $_SESSION['MSG_ERRO'] = !empty($_SESSION['MSG_ERRO']) ? $_SESSION['MSG_ERRO'] : '';
+
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +122,6 @@
                
                 <?php
 
-                    
                     foreach($usuarios as $posicao => $usuario)
                     {
                         
@@ -140,7 +150,7 @@
         </div>
     </div>
     
-    <form method="post" action="http://localhost/formulario/tela_cadastro.php" id="formalterarusuario">
+    <form method="post" action="<?php echo $base_url?>tela_cadastro.php" id="formalterarusuario">
         
         <input type="hidden" name="nome"                id="usuario_nome"           value="">
         <input type="hidden" name="sobrenome"           id="usuario_sobrenome"      value="">
