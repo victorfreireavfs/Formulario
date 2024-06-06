@@ -45,28 +45,6 @@
       header("location:  http://localhost/formulario/tela_login.php"); 
     }
 
-    // echo "<pre>";
-    // print_r($_POST);
-    // echo "<pre>";
-    // var_dump($email == $_SESSION['email']);
-    // echo "<pre>";
-    // var_dump($senha == $_SESSION['senha']);
-    // die;
-      
-    // if($email == $_SESSION['email'] && $senha == $_SESSION['senha'])
-    // {
-      
-    //   header("location: http://localhost/sistema_formulario/tela_inicial.php"); 
-
-    //   $_SESSION['usuario']  = $email;
-    //   $_SESSION['senha']    = $senha;
-
-    // }
-    // else
-    // {
-    //   // header("location:  http://localhost/sistema_formulario/tela_login.php"); 
-    //   $_SESSION['erro']    = 'ERRO';
-    // }
 
   } 
 

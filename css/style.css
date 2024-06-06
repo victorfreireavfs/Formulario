@@ -118,30 +118,6 @@ body{
 }
 
 
-/* botao continuar */
-/* .botao-continuar button{
-    width: 50%;
-    margin-top: 2.5rem;
-    border: none;
-    background-color: gray;
-    padding: 6px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.botao-continuar button:hover{
-    background-color: rgba(128, 128, 128, 0.76);
-}
-.formulario .botao-continuar button {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-} */
-
-
-
-/* media query */
-
 @media screen and (max-width: 1360px){
     .imagem-formulario{
         display: none;
